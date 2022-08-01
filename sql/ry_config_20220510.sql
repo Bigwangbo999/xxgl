@@ -1,11 +1,10 @@
-DROP DATABASE IF EXISTS `ry-config`;
+DROP DATABASE IF EXISTS `ry-config-3`;
 
-CREATE DATABASE  `ry-config` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE  `ry-config-3` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
-USE `ry-config`;
+USE `ry-config-3`;
 
 /******************************************/
 /*   表名称 = config_info   */

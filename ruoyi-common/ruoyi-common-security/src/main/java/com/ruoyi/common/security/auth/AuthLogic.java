@@ -3,6 +3,8 @@ package com.ruoyi.common.security.auth;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+
+import org.springframework.stereotype.Service;
 import org.springframework.util.PatternMatchUtils;
 import com.ruoyi.common.core.exception.auth.NotLoginException;
 import com.ruoyi.common.core.exception.auth.NotPermissionException;
@@ -22,6 +24,7 @@ import com.ruoyi.system.api.model.LoginUser;
  * 
  * @author ruoyi
  */
+@Service("ss")
 public class AuthLogic
 {
     /** 所有权限标识 */

@@ -3,7 +3,21 @@ server:
   port: 9203
 
 # Spring
-spring: 
+spring:
+  datasource:
+  #需同步的数据库
+    xxgl:
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      jdbc-url: jdbc:oracle:thin:@192.168.55.131:1521:ORCL
+      username: xxgl
+      password: admin
+
+  #来源数据库
+    sshe:
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      jdbc-url: jdbc:oracle:thin:@192.168.96.248:1521:sjck
+      username: sshe
+      password: admin
   application:
     # 应用名称
     name: ruoyi-job

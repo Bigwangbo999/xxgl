@@ -1,0 +1,56 @@
+
+
+    #需同步的数据库
+    xxgl:
+        name: XXGL
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        url: jdbc:oracle:thin:@192.168.55.131:1521:ORCL
+        username: xxgl
+        password: admin
+
+    #来源数据库
+      sshe:
+        name: SSHE
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        url: jdbc:oracle:thin:@192.168.96.248:1521:sjck
+        username: sshe
+        password: admin
+
+mysql:ry-config-3
+    host: 116.63.175.83
+    username: root
+    password: A_isino#888
+
+redis:
+    host: 192.168.96.215
+    port: 6379
+    password:
+    database:
+
+
+配置nacos持久化，修改conf/application.properties文件，增加支持mysql数据源配置
+最新RuoYi-Cloud版本>=3.0.0需要下载的nacos-server必须>=2.x.x版本(2.0.3)。
+默认配置单机模式
+##nacos:
+    spring.datasource.platform=mysql
+    db.num=1
+    db.url.0=jdbc:mysql://116.63.175.83:3306/ry-config-3?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+    db.user=root
+    db.password=A_isino#888
+
+修改bin/startup.cmd文件:
+    将 set MODE="cluster" 修改为 set MODE="standalone"
+# 进入项目目录
+    cd ruoyi-ui
+
+# 安装依赖
+    npm install
+
+# 强烈建议不要用直接使用 cnpm 安装，会有各种诡异的 bug，可以通过重新指定 registry 来解决 npm 安装速度慢的问题。
+    npm install --registry=https://registry.npmmirror.com
+
+# 本地开发 启动项目
+    npm run dev
+
+    数据库配置
+    #数据源耷拉耷拉莽子都不会还能感谢山干些啥啥都不会
