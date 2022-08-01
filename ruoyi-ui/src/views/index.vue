@@ -1,5 +1,5 @@
 <template>
-<div>发票管理平台</div>
+<div>销项管理系统</div>
 </template>
 
 <script>

@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      title: '发票管理平台',
+      title: '销项管理系统',
       logo: logoImg
     }
   }

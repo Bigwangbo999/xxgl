@@ -7,6 +7,7 @@ import com.ruoyi.web.entity.SaleCifcs;
 import com.ruoyi.web.service.SaleCifcService;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 public class SaleCifcServiceImpl implements SaleCifcService {
@@ -17,12 +18,22 @@ public class SaleCifcServiceImpl implements SaleCifcService {
     }
 
     @Override
+    public void downloadExcel(HttpServletResponse response) {
+
+    }
+
+    @Override
     public InvoiceResult importExcel(MultipartFile multipartFile) {
         return null;
     }
 
     @Override
     public AjaxResult insertSeller(SaleCifcs saleCifcs) {
+        return null;
+    }
+
+    @Override
+    public AjaxResult updateSaller(SaleCifcs saleCifcs) {
         return null;
     }
 }
